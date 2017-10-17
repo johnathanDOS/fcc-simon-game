@@ -3,51 +3,41 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">      
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>    
     <link rel="stylesheet" href="./styles.css">
     <title>FCC Simon Game - JDOS</title>
 </head>
 <body>
-
-    <div id="game-container">
-
-        <div class="btn-container" id="top-btn-row">
-
-            <div class="game-btn" id="red-btn" onclick="playerClick(this)">
+    <div class="app">
+        <div class="game-container">        
+            <div class="center" id="center">
+                <div class="menu" id="menu">
+                    <div class="game-title" id="title">
+                        Simon
+                    </div>
+                    <button class="menu-btn" id="start-btn" onclick="startGame()">
+                        Start
+                    </button>
+                    <div class="game-display" id="count">
+                        Press Start
+                    </div>
+                </div>
             </div>
-
-            <div class="game-btn" id="yellow-btn" onclick="playerClick(this)">
+            <div class="btn-container" id="top-btn-row">
+                <div class="game-btn" id="green-btn" onclick="playerClick(this)">
+                </div>
+                <div class="game-btn" id="red-btn" onclick="playerClick(this)">
+                </div>
             </div>
-            
+            <div class="btn-container" id="bottom-btn-row">
+                <div class="game-btn" id="yellow-btn" onclick="playerClick(this)">
+                </div>
+                <div class="game-btn" id="blue-btn" onclick="playerClick(this)">
+                </div>    
+            </div>
         </div>
-
-        <div class="btn-container" id="bottom-btn-row">
-        
-            <div class="game-btn" id="blue-btn" onclick="playerClick(this)">
-            </div>
-
-            <div class="game-btn" id="green-btn" onclick="playerClick(this)">
-            </div>
-        
-        </div>
-
-        <div class="btn-container" id="menu">
-
-            <button class="menu-btn" id="start-btn">
-                Start
-            </button>
-
-            <button class="menu-btn" id="restart-btn">
-                Restart
-            </button>
-
-            <div class="game-display" id="count">
-            </div>
-
-        </div>
-
     </div>
-
 </body>
 <script src="./scripts.js"></script>
 </html>
