@@ -5,10 +5,10 @@ let gameState = {
     state: 'idle', 
 }
 
-const rTone = new Audio ('https://s3.amazonaws.com/freecodecamp/simonSound1.mp3')
-const gTone = new Audio ('https://s3.amazonaws.com/freecodecamp/simonSound2.mp3')
-const bTone = new Audio ('https://s3.amazonaws.com/freecodecamp/simonSound3.mp3')
-const yTone = new Audio ('https://s3.amazonaws.com/freecodecamp/simonSound4.mp3')
+let rTone = new Audio ('https://s3.amazonaws.com/freecodecamp/simonSound1.mp3')
+let gTone = new Audio ('https://s3.amazonaws.com/freecodecamp/simonSound2.mp3')
+let bTone = new Audio ('https://s3.amazonaws.com/freecodecamp/simonSound3.mp3')
+let yTone = new Audio ('https://s3.amazonaws.com/freecodecamp/simonSound4.mp3')
 
 
 function startGame() {
