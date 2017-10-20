@@ -16,17 +16,36 @@
                     <div class="game-title" id="title">
                         Simon
                     </div>
-                    <button class="menu-btn" id="start-btn" onclick="startGame()">
-                        Start
-                    </button>
-                    <div class="switch">
-                            <span class="strict">Strict</span>  
-                            <input id="cmn-toggle-1" class="cmn-toggle cmn-toggle-round" type="checkbox">
-                            <label for="cmn-toggle-1"></label>
-  
+                    <div class="ui" id="user-interface">
+
+                        <button class="menu-btn" id="start-btn" onclick="startGame()">
+                            Play
+                        </button>
+
+                        <button class="menu-btn" id="restart-btn" onclick="restartGame()">
+                                Restart
+                            </button>
+
+                        <div class="switch-container">
+
+
+                                <label class="switch">
+                                    <input 
+                                    id="strict-toggle" 
+                                    class="toggle" 
+                                    type="checkbox">
+                                    <span class="slider"></span>
+                                </label>
+
+                                <label 
+                                for="strict-toggle" 
+                                style="font-size: 14px; font-family: 'Alfa Slab One'">Strict</label>
+      
+                        </div>
+
                     </div>
                     <div class="game-display" id="count">
-                        Press Start
+                        Press Play
                     </div>
                 </div>
             </div>

@@ -48,7 +48,7 @@ body {
 
 .game-title {
     font-family: 'Alfa Slab One';
-    font-size: 35px;
+    font-size: 30px;
 }
 
 .game-display {
@@ -71,59 +71,9 @@ body {
     color: black;
 }
 
-.strict {
-    font-size: 20px;
-    float: right;
+.toggle {
+    font-size: 12px;
 }
-
-.cmn-toggle {
-    position: absolute;
-    margin-left: -9999px;
-    visibility: hidden;
-  }
-.cmn-toggle + label {
-    display: block;
-    position: relative;
-    cursor: pointer;
-    outline: none;
-    user-select: none;
-  }
-
-  input.cmn-toggle-round + label {
-    padding: 2px;
-    width: 30px;
-    height: 15px;
-    background-color: black;
-    border-radius: 15px;
-  }
-  input.cmn-toggle-round + label:before,
-  input.cmn-toggle-round + label:after {
-    display: block;
-    position: absolute;
-    top: 1px;
-    left: 1px;
-    bottom: 1px;
-    content: "";
-  }
-  input.cmn-toggle-round + label:before {
-    right: 1px;
-    background-color: gray;
-    border-radius: 15px;
-    transition: background 0.4s;
-  }
-  input.cmn-toggle-round + label:after {
-    width: 15px;
-    background-color: #fff;
-    border-radius: 100%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    transition: margin 0.4s;
-  }
-  input.cmn-toggle-round:checked + label:before {
-    background-color: gray;
-  }
-  input.cmn-toggle-round:checked + label:after {
-    margin-left: 15px;
-  }
 
 #green-btn {
     background-color: green;
@@ -152,3 +102,83 @@ body {
     border-right-width: 10px;
     border-bottom-right-radius: 100%;
 }
+
+#start-btn {
+    background-color: #D3D3D3;
+}
+
+#restart-btn {
+    background-color: #D3D3D3;
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 28px;
+    height: 14px;
+  }
+
+  /* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 10px;
+    width: 10px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(14px);
+    -ms-transform: translateX(14px);
+    transform: translateX(14px);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

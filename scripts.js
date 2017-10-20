@@ -17,6 +17,19 @@ function startGame() {
     }
 }
 
+function restartGame() {
+    if (gameState.state === 'running') {
+        gameState.simonPattern = []
+        gameState.playerPattern = []
+        gameState.state = 'idle'
+        gameState.count = 0
+        clearInterval(nIntervId)
+        nIntervId = null
+        smnPtrnNode = 0
+        startGame()
+    }
+}
+
 function countUp() {
     const colors = ["r", "y", "g", "b"]
     gameState.simonPattern.push(colors[Math.floor(Math.random()  * 4)])
@@ -126,23 +139,37 @@ function plySmnPtrn() {
     console.log(smnPtrnNode)
 }
 
-// TODO:
-//     - Write function to check playerPattern against simonPattern
-//     - Write code to read simonPattern array and play sounds/update display accordingly
-
 function ptrnCompare() {
     for (var i = 0; i < gameState.playerPattern.length; i ++) {
         if (gameState.playerPattern[i] != gameState.simonPattern[i]) {
-            gameState.count = 0
-            document.getElementById('count').innerHTML = "Start over!"
-            gameState.simonPattern = []
-            gameState.playerPattern = []
-            gameState.state = 'idle'
-            break
+            if (document.getElementById('strict-toggle').checked) {
+                gameState.count = 0
+                document.getElementById('count').innerHTML = "Start over!"
+                gameState.simonPattern = []
+                gameState.playerPattern = []
+                gameState.state = 'idle'
+                break
+            }
+            else {
+                document.getElementById('count').innerHTML = "Listen again."
+                gameState.playerPattern = []
+                smnTrn()
+                break
+            }
         }
+    }
+    if (gameState.playerPattern.length == 20) {
+        gameWin()
     }
 }
 
+function gameWin() {
+    document.getElementById('count').innerHTML = "You win!"
+    gameState.simonPattern = []
+    gameState.playerPattern = []
+    gameState.state = 'idle'
+    gameState.count = 0;
+}
 
 
 
